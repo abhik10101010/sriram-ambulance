@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sriram Ambulance Service - KhuskiBagh, Purnia</title>
+<meta name="description" content="Sriram Ambulance Service provides Air, Road & Train ambulance services in Purnia, Bihar. 24x7 emergency service. Call or WhatsApp now!">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin:0; padding:0;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://cdn.pixabay.com/photo/2017/03/29/03/45/ambulance-2180971_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color:#fff;
+}
+a {text-decoration:none; color:#fff;}
+.container {max-width:750px; margin:0 auto; padding:20px;}
+/* Header */
+header {
+    position: sticky; top:0; left:0; right:0;
+    background: rgba(0,0,0,0.8); 
+    display:flex; justify-content:space-between; align-items:center;
+    padding:10px 20px; z-index:999;
+}
+header img {width:80px; border-radius:10px;}
+header .contact {text-align:right; font-size:14px;}
+header .contact a {display:inline-block; margin-left:10px; color:#25d366; font-weight:bold;}
+/* Hero */
+.hero-section {text-align:center; margin-top:20px;}
+.hero-section h1 {font-size:32px; color:#ffeb3b; margin-bottom:10px;}
+.hero-section h2 {font-size:20px; margin-bottom:15px;}
+.hero-section img {width:100%; border-radius:10px; border:3px solid #ffeb3b; margin-bottom:15px;}
+/* Buttons */
+button {width:100%; padding:15px; margin:5px 0; font-size:16px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; transition:0.3s; box-shadow:0 4px 6px rgba(0,0,0,0.3);}
+button:hover {opacity:0.9; transform: translateY(-2px);}
+.call {background:#28a745;}
+.whatsapp {background:#25d366;}
+.inquiry {background:#007bff;}
+.call-options {display:none; margin-top:10px; text-align:center;}
+.call-options button {width:32%; margin-right:2%;}
+.call-options button:last-child {margin-right:0;}
+/* Form */
+form {display:none; margin-top:15px; background: rgba(255,255,255,0.1); padding:15px; border-radius:10px;}
+select, input {width:100%; padding:10px; margin:5px 0; border-radius:5px; border:none;}
+.submit-btn {background:#ff5722; cursor:pointer; font-weight:bold;}
+p.note {text-align:center; font-size:14px; color:#ccc; margin-top:5px;}
+/* Footer */
+footer {text-align:center; margin-top:20px; font-size:14px; color:#ffeb3b; padding:10px 0; border-top:1px solid #fff;}
+/* Responsive */
+@media(max-width:600px){header{flex-direction:column;text-align:center;} header .contact{margin-top:5px;}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <img src="https://i.imgur.com/YOUR_LOGO_IMAGE.png" alt="Logo">
+    <div class="contact">
+      📞 +91 8544041646
+      <a href="https://wa.me/918544041646" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <span style="background:#ff0000; padding:3px 5px; border-radius:5px; font-size:12px;">24×7</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Sriram Ambulance Service</h1>
+    <h2>24×7 Emergency Ambulance Services in Purnia, Bihar</h2>
+    <img src="https://content3.jdmagicbox.com/comp/purnia/g1/9999p6454.6454.201116142630.r1g1/catalogue/shri-ram-ambulance-purnia-ambulance-services-m9ja817e0q.jpg" alt="Ambulance Photo">
+    <button class="call" onclick="toggleCallOptions()"><i class="fas fa-phone"></i> Call Options</button>
+    <div class="call-options" id="callOptions">
+      <button onclick="window.location.href='tel:+918544041646'"><i class="fas fa-phone"></i> Call Direct</button>
+      <button onclick="window.open('https://wa.me/918544041646','_blank')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+      <button onclick="window.open('truecaller://+918544041646','_blank')"><i class="fas fa-user-check"></i> Truecaller</button>
+    </div>
+    <p class="note">*Click Call button on mobile for direct dialing*</p>
+    <button class="whatsapp" onclick="window.open('https://wa.me/918544041646?text=Hello,%20I%20need%20ambulance%20service','_blank')"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+    <button class="inquiry" onclick="document.getElementById('inquiryForm').style.display='block'; this.style.display='none';"><i class="fas fa-file-alt"></i> Inquiry</button>
+  </div>
+
+  <!-- Inquiry Form -->
+  <form id="inquiryForm">
+    <label>Type of Ambulance Service:</label>
+    <select id="ambulanceType">
+      <option value="Air Ambulance">Air Ambulance</option>
+      <option value="Road Ambulance">Road Ambulance</option>
+      <option value="Train Ambulance">Train Ambulance</option>
+    </select>
+    <label>State:</label>
+    <select id="state">
+      <option value="Bihar">Bihar</option>
+      <option value="Other">Other</option>
+    </select>
+    <label>District:</label>
+    <select id="district">
+      <option value="Purnia">Purnia</option>
+      <option value="Katihar">Katihar</option>
+      <option value="Araria">Araria</option>
+      <option value="Saharsa">Saharsa</option>
+      <option value="Madhepura">Madhepura</option>
+      <option value="Kishanganj">Kishanganj</option>
+      <option value="Bhagalpur">Bhagalpur</option>
+      <option value="Darbhanga">Darbhanga</option>
+      <option value="Muzaffarpur">Muzaffarpur</option>
+      <option value="Patna">Patna</option>
+      <!-- Add all Bihar districts if needed -->
+    </select>
+    <label>City / Town:</label>
+    <input type="text" id="city" placeholder="Enter your city">
+    <label>Mobile Number:</label>
+    <input type="tel" id="mobile" placeholder="Enter your mobile number">
+    <button type="button" class="submit-btn" onclick="sendWhatsApp()"><i class="fas fa-paper-plane"></i> Submit</button>
+  </form>
+
+  <!-- Footer -->
+  <footer>
+    📍 KhuskiBagh, Purnia | 24×7 Emergency Service Available
+  </footer>
+</div>
+
+<script>
+// Toggle Call Options
+function toggleCallOptions() {
+  var div = document.getElementById('callOptions');
+  div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+}
+
+// Send Inquiry to WhatsApp
+function sendWhatsApp() {
+  var type = document.getElementById('ambulanceType').value;
+  var state = document.getElementById('state').value;
+  var district = document.getElementById('district').value;
+  var city = document.getElementById('city').value;
+  var mobile = document.getElementById('mobile').value;
+  if(city=="" || mobile==""){alert("Please fill all fields"); return;}
+  var message = `I need ${type} in ${state}, ${district}, ${city}. My mobile: ${mobile}`;
+  var whatsappNumber = "918544041646";
+  var url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url,'_blank');
+}
+</script>
+
+</body>
+</html>
